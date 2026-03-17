@@ -1,0 +1,181 @@
+main {
+    width: 100%;
+}
+
+body {
+    background-color: #fff;
+    font-family:"Roboto", sans-serif;
+    font-size: 12px;
+}
+
+.cabecera-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.cabecera-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cabecera-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px 40px;
+    border-radius: 15px; 
+}
+
+.cabecera-overlay h2 {
+    font-family: "Comfortaa", sans-serif;
+    color: #03A8D5;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.contenido-centro {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.col-izquierda {
+    flex: 1;
+    text-align: center;
+}
+
+.col-izquierda img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Torre-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+.col-derecha {
+    flex: 1.5;
+}
+
+.texto-bienvenida {
+    background-color: rgba(3, 168, 213, 0.5);
+    padding: 30px;
+    text-align: justify;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.texto-bienvenida p {
+    margin-bottom: 15px;
+}
+
+.titulo2 {
+    background-color: rgba(3, 168, 213, 0.5);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo2 h2 {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: bold;
+    color:black;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.grid-enlaces {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    position: relative;
+}
+
+.tarjeta {
+    position: relative;
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color:black;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.texto-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color:rgb(0, 0, 0, 0.75);
+    padding: 20px;
+    width: auto;
+    text-align: center;
+}
+
+.texto-overlay h3 {
+    color: #D1FFFF;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.tarjeta:hover img {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1100px) {
+    .contenido-centro {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .cabecera-banner {
+        height: 300px;
+    }
+    .caja-texto {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .bloque-imagen-texto {
+        flex-direction: column;
+    }
+    .imagen-inicio, .texto-inicio {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecera-overlay h2 {
+        font-size: 29px;
+    }
+    p {
+        font-size: 14px;
+    }
+}

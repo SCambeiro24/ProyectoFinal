@@ -1,0 +1,151 @@
+body {
+    background-color: #fff;
+    font-family:"Roboto", sans-serif;
+    font-size: 12px;
+}
+
+main {
+    width: 100%;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+.cabecera-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.cabecera-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cabecera-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px 40px;
+    border-radius: 15px; 
+    
+}
+
+.cabecera-overlay h2 {
+    font-family: "Comfortaa", sans-serif;
+    color: #03A8D5;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+
+.contenido-centro {
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+
+.titulo-pagina {
+    background-color: rgba(135, 206, 235, 0.9); 
+    background-color: rgba(3, 168, 213, 0.5); 
+    padding: 15px 50px;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-pagina h2 {
+    font-family: "Comfortaa", sans-serif;
+    color: #333; 
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+.fila-detalle {
+    display: flex;
+    align-items: center; 
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+
+.img-detalle {
+    flex: 1; 
+    height: 300px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.img-detalle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.texto-detalle {
+    flex: 1; 
+    background-color: rgba(3, 168, 213, 0.5);
+    padding: 30px;
+    text-align: justify;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.texto-detalle p {
+    margin: 0;
+    color:black;
+}
+
+@media (max-width: 1100px) {
+    .contenido-centro {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cabecera-banner { 
+        height: 300px; 
+    }
+    .img-detalle { 
+        height: 250px; 
+    }
+}
+
+@media (max-width: 700px) {
+    .fila-detalle { 
+        flex-direction: column; 
+        gap: 20px; 
+    }
+    .img-detalle, .texto-detalle { 
+        width: 100%;
+    }
+    .titulo-pagina h2 { 
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-detalle p { 
+        font-size: 14px;
+    }
+    .img-detalle { 
+        height: 200px; 
+    }
+}

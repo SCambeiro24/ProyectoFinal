@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Coruña - Turismo</title>
+    <link rel="stylesheet" href="css/PieyCabecera.css">
+    <link rel="stylesheet" href="css/Turismo.css">
+    <script src="https://kit.fontawesome.com/69898e44be.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&family=Comfortaa:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <header class="header">
+    <div class="logo">
+        <a href="Inicio.html" class="logo_link">
+            <img src="img/logo.jpeg" alt="Visit Coruña" title="Logo">
+            <h1 class="logo_titulo">VISIT<span>CORUÑA</span></h1>
+        </a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    
+    <ul>
+        <li><a href="Inicio.html">INICIO</a></li>
+        <li><a href="Historia.html">CULTURA & HISTORIA</a></li>
+        <li>
+            <a href="Turismo.html" class="activo">TURISMO</a>
+            <ul class="Desplegable">    
+                <li><a href="Monumentos.html">Monumentos</a></li>
+                <li><a href="Naturaleza.html">Naturaleza</a></li>
+                <li><a href="Actividades.html">Actividades y Ocio</a></li>
+            </ul>
+        </li>
+        <li><a href="Gastronomía.html">GASTRONOMÍA</a></li>
+        <li><a href="Guía_práctica.html">GUÍA PRÁCTICA</a></li>
+        <li><a href="Contacto.html">CONTACTO</a></li>
+    </ul>
+    <div class="header_icons">   
+            <div class="icono-interactivo">
+                <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
+                <ul class="desplegable-icono idiomas">
+                    <li><a href="#">ES</a></li>
+                    <li><a href="#">GL</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+
+            <div class="icono-interactivo">
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <div class="desplegable-icono ofertas">
+                    <p>¡Ofertas exclusivas!</p>
+                    <input type="email" placeholder="Tu email...">
+                    <button>Suscribirme</button>
+                </div>
+            </div>
+    </div>
+ </header>
+
+ <main>
+    
+    <div class="cabecera-banner">
+        <img src="img/cabecera.jpeg" alt="Turismo en Coruña" class="cabecera-img">
+        <div class="cabecera-overlay">
+            <h2>TURISMO</h2>
+        </div>
+    </div>
+
+    <div class="contenido-centro">
+        
+        <div class="bloque-texto-intro">
+            <p>A Coruña ofrece tantos atractivos que es difícil elegir. Desde la Torre de Hércules y la Plaza de María Pita hasta las playas de Riazor y Orzán, la ciudad combina historia, mar y cultura. Un paseo por su paseo marítimo o una visita al Castillo de San Antón son solo algunas de las experiencias que no te puedes perder.</p>
+        </div>
+
+        <a href="Monumentos.html" class="tarjeta-grande">
+            <img src="img/monumento.jpg" alt="Monumentos">
+            <div class="overlay-tarjeta">
+                <h3>MONUMENTOS</h3>
+            </div>
+        </a>
+
+        <a href="Naturaleza.html" class="tarjeta-grande">
+            <img src="img/naturaleza.jpg" alt="Naturaleza">
+            <div class="overlay-tarjeta">
+                <h3>NATURALEZA</h3>
+            </div>
+        </a>
+
+        <a href="Actividades.html" class="tarjeta-grande">
+            <img src="img/Riazor.jpg" alt="Actividades y Ocio">
+            <div class="overlay-tarjeta">
+                <h3>ACTIVIDADES<br>Y<br>OCIO</h3>
+            </div>
+        </a>
+
+        <div class="bloque-texto-cierre">
+            <p>Esta es una ciudad que combina historia, mar y cultura en cada rincón. Ya sea caminando por sus calles, disfrutando de sus playas o participando en sus fiestas, siempre encontrarás algo que hará tu visita inolvidable.</p>
+        </div>
+
+    </div> 
+ </main>
+
+ <footer class="footer">
+    <div class="footer_col">
+        <p>Escríbenos y te ayudaremos<br>a planificar tu viaje</p>
+        <a href="mailto:visitcoruna@gmail.com" class="footer_correo">visitcoruna@gmail.com</a>
+        </div>
+        <div class="footer_col">
+        <p>Portal oficial de La Coruña</p>
+        <a href="Inicio.html">visitcoruna.es</a>
+        </div>
+    <div class="footer_license">
+        <p>Este trabajo esta bajo licencia</p> <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a>
+    </div>
+    <div class="footer_col">
+        <p>SÍGUENOS!</p>
+        <div class="footer_redes">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+body {
+    background-color:white;
+    font-family:"Roboto", sans-serif;
+    font-size: 12px;
+}
+
+main {
+    width: 100%;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.cabecera-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.cabecera-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cabecera-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px 40px;
+    border-radius: 15px; 
+}
+
+.cabecera-overlay h2 {
+    font-family: "Comfortaa", sans-serif;
+    color: #03A8D5;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.contenido-centro {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.caja-intro, .caja-info, .bloque-consejos, .caja-cierre {
+    background-color: rgba(3, 168, 213, 0.5);
+    padding: 25px 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 2px;
+}
+
+.caja-intro {
+    text-align: center;
+}
+
+.contenedor-boton {
+    text-align: center;
+}
+
+.boton-mapa {
+    display: inline-block;
+    background-color: #a9daea;
+    padding: 15px 30px;
+    color:black;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.boton-mapa:hover {
+    background-color: #87ceeb;
+    transition: all 0.3s ease;
+}
+
+.caja-info {
+    width: 70%;
+    align-self: center;
+}
+
+.caja-info p {
+    margin-bottom: 15px;
+}
+
+.caja-info p:last-child {
+    margin-bottom: 0;
+}
+
+.bloque-consejos {
+    text-align: justify;
+}
+
+.bloque-consejos p {
+    margin-bottom: 15px;
+}
+
+.bloque-consejos p:last-child {
+    margin-bottom: 0;
+}
+
+.imagen-guia {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.imagen-guia img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caja-cierre {
+    text-align: center;
+    width: 80%;
+    align-self: center;
+}
+
+@media (max-width: 1100px) {
+    .contenido-centro {
+        max-width: 850px;
+    }
+}
+
+@media (max-width: 900px) {
+    .caja-info {
+        width: 85%;
+    }
+}
+
+@media (max-width: 700px) {
+    .caja-info, .caja-cierre {
+        width: 100%;
+    }
+    .boton-mapa {
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    p {
+        font-size: 14px;
+    }
+}

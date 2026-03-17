@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Coruña - Contacto</title>
+    <link rel="stylesheet" href="css/PieyCabecera.css">
+    <link rel="stylesheet" href="css/Contacto.css">
+    <script src="https://kit.fontawesome.com/69898e44be.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&family=Comfortaa:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <header class="header">
+    <div class="logo">
+        <a href="Inicio.html" class="logo_link">
+            <img src="img/logo.jpeg" alt="Visit Coruña" title="Logo">
+            <h1 class="logo_titulo">VISIT<span>CORUÑA</span></h1>
+        </a>
+    </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    <ul>
+        <li><a href="Inicio.html">INICIO</a></li>
+        <li><a href="Historia.html">CULTURA & HISTORIA</a></li>
+        <li>
+            <a href="Turismo.html">TURISMO</a>
+            <ul class="Desplegable">    
+                <li><a href="Monumentos.html">Monumentos</a></li>
+                <li><a href="Naturaleza.html">Naturaleza</a></li>
+                <li><a href="Actividades.html">Actividades y Ocio</a></li>
+            </ul>
+        </li>
+        <li><a href="Gastronomía.html">GASTRONOMÍA</a></li>
+        <li><a href="Guía_práctica.html">GUÍA PRÁCTICA</a></li>
+        <li><a href="Contacto.html" class="activo">CONTACTO</a></li>
+    </ul>
+    <div class="header_icons">   
+            <div class="icono-interactivo">
+                <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
+                <ul class="desplegable-icono idiomas">
+                    <li><a href="#">ES</a></li>
+                    <li><a href="#">GL</a></li>
+                    <li><a href="#">EN</a></li>
+                </ul>
+            </div>
+            <div class="icono-interactivo">
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <div class="desplegable-icono ofertas">
+                    <p>¡Ofertas exclusivas!</p>
+                    <input type="email" placeholder="Tu email...">
+                    <button>Suscribirme</button>
+                </div>
+            </div>
+    </div>
+ </header>
+
+ <main>
+    <div class="cabecera-banner">
+        <img src="img/cabecera.jpeg" alt="Contacto Visit Coruña" class="cabecera-img">
+        <div class="cabecera-overlay">
+            <h2>CONTACTO</h2>
+        </div>
+    </div>
+
+    <div class="contenido-centro">
+        
+        <div class="caja-intro">
+            <p>¿Tienes dudas, quieres más información o deseas recomendar una experiencia en A Coruña? Ponte en contacto con nosotros, estaremos encantados de ayudarte.</p>
+        </div>
+
+        <div class="imagen-mapa">
+            <img src="img/mapa-a-coruna.jpg" alt="Mapa de A Coruña">
+        </div>
+
+        <div class="bloque-interactivo">
+            <div class="form-container">
+                <h2>Formulario de contacto</h2>
+                <form>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos">
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="consulta">Consulta</label>
+                    <textarea id="consulta" name="consulta"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="redes-container">
+                <h2>Nuestras redes sociales<br>Siguenos!</h2>
+                <div class="fila-red">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="nombre-red">visit_coruna</span>
+                </div>
+                <div class="fila-red">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span class="nombre-red">VisitCoruna</span>
+                </div>
+                <div class="fila-red">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span class="nombre-red">VisitCoruna</span>
+                </div>
+                <div class="fila-red">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span class="nombre-red">visit_coruna</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="caja-cierre">
+            <p>En Visit Coruña queremos que tu experiencia sea única. Escríbenos y te responderemos lo antes posible.</p>
+        </div>
+
+    </div> 
+ </main>
+
+ <footer class="footer">
+    <div class="footer_col">
+        <p>Escríbenos y te ayudaremos<br>a planificar tu viaje</p>
+        <a href="mailto:visitcoruna@gmail.com" class="footer_correo">visitcoruna@gmail.com</a>
+    </div>
+    <div class="footer_col">
+        <p>Portal oficial de La Coruña</p>
+        <a href="Inicio.html">visitcoruna.es</a>
+    </div>
+    <div class="footer_license">
+        <p>Este trabajo esta bajo licencia</p> <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a>
+    </div>
+    <div class="footer_col">
+        <p>SÍGUENOS!</p>
+        <div class="footer_redes">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
