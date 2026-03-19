@@ -269,6 +269,17 @@ p {
   transition: all 0.3s ease;
 }
 
+.footer_col a:hover,
+.footer_license a:hover {
+    color: #03a7d5;
+    text-decoration: underline double;
+    text-underline-offset: 4px;
+}
+
+.footer_redes a:hover i {
+    color: #03a7d5;
+}
+
 @media (max-width: 1100px) {
     li > a {
         padding: 14px 10px;
