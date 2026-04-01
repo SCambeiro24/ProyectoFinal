@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
 
     const updateSlider = () => {
-        // Multiplicamos el índice por -100 para mover el track a la izquierda
         const amountToMove = currentIndex * 100;
         track.style.transform = `translateX(-${amountToMove}%)`;
     };
