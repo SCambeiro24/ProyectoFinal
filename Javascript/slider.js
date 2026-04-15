@@ -1,30 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.slider-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('#nextBtn');
-    const prevButton = document.querySelector('#prevBtn');
+document.addEventListener('DOMContentLoaded', function() {
+    
+    var track = document.querySelector('.slider-track');
+    var btnSiguiente = document.getElementById('nextBtn');
+    var btnAnterior = document.getElementById('prevBtn');
+    
+    var fotos = document.getElementsByClassName('slide');
+    var indiceActual = 0;
 
-    if (!track || !nextButton || !prevButton) {
-        console.error("ERROR: No encuentro los elementos. Revisa los IDs en el HTML.");
-        return;
+    function moverSlider(indice) {
+        var desplazamiento = indice * -100;
+        track.style.transform = 'translateX(' + desplazamiento + '%)';
     }
 
-    let currentIndex = 0;
-
-    const updateSlider = () => {
-        const amountToMove = currentIndex * 100;
-        track.style.transform = `translateX(-${amountToMove}%)`;
-    };
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlider();
+    btnSiguiente.addEventListener('click', function() {
+        indiceActual = indiceActual + 1;
+        
+        if (indiceActual >= fotos.length) {
+            indiceActual = 0;
+        }
+        moverSlider(indiceActual);
     });
 
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateSlider();
+    btnAnterior.addEventListener('click', function() {
+        indiceActual = indiceActual - 1;
+        
+        if (indiceActual < 0) {
+            indiceActual = fotos.length - 1;
+        }
+        moverSlider(indiceActual);
     });
 
-    console.log("Slider listo con " + slides.length + " imágenes.");
 });

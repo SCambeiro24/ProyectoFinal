@@ -151,6 +151,7 @@ body {
 .caja-texto h2 {
     text-align: center;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .slider-container {
