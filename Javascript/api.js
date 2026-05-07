@@ -18,13 +18,31 @@ document.addEventListener('DOMContentLoaded', () => {
             
             datos.forEach(lugar => {
                 if (lugar.categoria_nombre === categoriaPagina) {
+                    
+                    // 1. Creamos las etiquetas con diseño de "píldora" centradas
+                    let etiquetasHTML = '';
+                    if (lugar.etiquetas_nombres && lugar.etiquetas_nombres.length > 0) {
+                        let spans = lugar.etiquetas_nombres.map(tag => 
+                            `<span style="background-color: #1e3a8a; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.75em; margin-right: 6px; font-weight: bold; white-space: nowrap;">${tag}</span>`
+                        ).join('');
+                        
+                        etiquetasHTML = `<div style="margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; width: 100%;">${spans}</div>`;
+                    }
+
+                    // 2. Título centrado y en MAYÚSCULAS con text-transform
                     const tarjetaHTML = `
                         <div class="fila-detalle">
                             <div class="img-detalle">
                                 <img src="${lugar.imagen_url}" alt="${lugar.nombre}">
                             </div>
-                            <div class="texto-detalle">
-                                <p><strong>${lugar.nombre}</strong> ${lugar.descripcion}</p>
+                            <div class="texto-detalle" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                                <h3 style="margin: 0 0 8px 0; font-size: 1.5em; text-align: center; text-transform: uppercase; width: 100%; color: #1a1a1a;">
+                                    ${lugar.nombre}
+                                </h3>
+                                ${etiquetasHTML}
+                                <div style="display: block; width: 100%; margin-top: 5px; text-align: left;">
+                                    <p style="margin: 0; line-height: 1.6; color: #333;">${lugar.descripcion}</p>
+                                </div>
                             </div>
                         </div>
                     `;
