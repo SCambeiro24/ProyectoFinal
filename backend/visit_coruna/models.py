@@ -16,6 +16,7 @@ class Lugar(models.Model):
     descripcion = models.TextField()
     imagen_url = models.CharField(max_length=255)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, related_name='lugares')
+    etiquetas = models.ManyToManyField('Etiqueta', blank=True)
     usuarios_que_valoran = models.ManyToManyField(User, through='Valoracion')
 
     class Meta:
@@ -35,3 +36,6 @@ class Valoracion(models.Model):
     class Meta:
         unique_together = ('usuario', 'lugar')
         verbose_name_plural = "Valoraciones"
+
+class Etiqueta(models.Model):
+    nombre = models.CharField(max_length=50)

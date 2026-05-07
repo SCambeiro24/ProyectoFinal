@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Categoria, Lugar, Valoracion
+from .models import Categoria, Lugar, Valoracion, Etiqueta
 from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
@@ -14,10 +14,15 @@ class CategoriaSerializer(serializers.ModelSerializer):
 
 class LugarSerializer(serializers.ModelSerializer):
     categoria_nombre = serializers.ReadOnlyField(source='categoria.nombre')
-
+    etiquetas_nombres = serializers.SlugRelatedField(
+            many=True,
+            read_only=True,
+            slug_field='nombre',
+            source='etiquetas'
+        )
     class Meta:
         model = Lugar
-        fields = ['id', 'nombre', 'descripcion', 'imagen_url', 'categoria', 'categoria_nombre']
+        fields = ['id', 'nombre', 'descripcion', 'imagen_url', 'categoria', 'categoria_nombre', 'etiquetas_nombres']
 
 class ValoracionSerializer(serializers.ModelSerializer):
     class Meta:
