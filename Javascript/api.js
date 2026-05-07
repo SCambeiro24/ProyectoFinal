@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             datos.forEach(lugar => {
                 if (lugar.categoria_nombre === categoriaPagina) {
                     
-                    // 1. Creamos las etiquetas con diseño de "píldora" centradas
                     let etiquetasHTML = '';
                     if (lugar.etiquetas_nombres && lugar.etiquetas_nombres.length > 0) {
                         let spans = lugar.etiquetas_nombres.map(tag => 
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         etiquetasHTML = `<div style="margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; width: 100%;">${spans}</div>`;
                     }
 
-                    // 2. Título centrado y en MAYÚSCULAS con text-transform
                     const tarjetaHTML = `
                         <div class="fila-detalle">
                             <div class="img-detalle">
