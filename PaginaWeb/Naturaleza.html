@@ -78,71 +78,19 @@
             <h2>NATURALEZA</h2>
         </div>
 
-        <div class="fila-detalle">
-            <div class="img-detalle">
-                <img src="img/paseo-maritimo.png" alt="Paseo Marítimo">
-            </div>
-            <div class="texto-detalle">
-                <p>Con más de 13 kilómetros de longitud, el <strong>Paseo Marítimo</strong> de A Coruña es uno de los más largos de Europa. Rodea gran parte de la ciudad uniendo playas, acantilados y monumentos como la Torre de Hércules o el Castillo de San Antón. Ideal para caminar, ir en bicicleta.</p>
-            </div>
-        </div>
-
-        <div class="fila-detalle">
-            <div class="img-detalle">
-                <img src="img/as-lapas.png" alt="Playas de Riazor y Orzán">
-            </div>
-            <div class="texto-detalle">
-                <p>A Coruña presume de tener playas urbanas de gran belleza y calidad. Las más conocidas son <strong>Riazor y Orzán</strong>, situadas junto al paseo marítimo, perfectas para el baño o practicar surf. También destacan <strong>San Amaro y As Lapas</strong>, más tranquilas y familiares.</p>
-            </div>
-        </div>
-
-        <div class="fila-detalle">
-            <div class="img-detalle">
-                <img src="img/ventana-atlantico.jpg" alt="Mirador al Atlántico">
-            </div>
-            <div class="texto-detalle">
-                <p><strong>El Mirador al Atlántico</strong> es un espacio natural frente al océano que invita a la calma y la contemplación. Desde este punto se puede disfrutar de vistas espectaculares del mar abierto, los acantilados y los paisajes del litoral coruñés. Es uno de los lugares más recomendables para ver el atardecer y sentir la fuerza del Atlántico en estado puro.</p>
-            </div>
-        </div>
-
-        <div class="fila-detalle">
-            <div class="img-detalle">
-                <img src="img/monte-san-pedro.jpg" alt="Monte de San Pedro">
-            </div>
-            <div class="texto-detalle">
-                <p><strong>El Monte de San Pedro</strong> es uno de los mejores miradores de A Coruña. Antiguamente fue una zona militar defensiva, pero hoy es un gran parque ajardinado con vistas panorámicas al océano Atlántico y a la ciudad. Desde su cima se puede subir en el famoso ascensor panorámico acristalado y disfrutar de un paisaje impresionante al atardecer.</p>
-            </div>
-        </div>
-
-        <div id="contenido-extra" style="display: none;">
+        <div id="contenedor-api-lugares" data-categoria="Naturaleza">
     
-        <div class="fila-detalle">
-            <div class="img-detalle">
-                <img src="img/santa-margarita.jpg" alt="Parque de Santa Margarita">
-            </div>
-            <div class="texto-detalle">
-                <p><strong>El Parque de Santa Margarita</strong>  es el auténtico pulmón verde situado en el corazón de la ciudad. Con más de 50.000 metros cuadrados, este espacio cuenta con una inmensa variedad de especies arbóreas, zonas de descanso y un estanque con patos que lo convierten en el lugar favorito de las familias coruñesas. En su parte más alta se encuentra el palacete que alberga la Casa de las Ciencias, rodeado de áreas de juegos y senderos perfectos para desconectar del bullicio urbano sin salir del centro.</p>
-            </div>
         </div>
 
-        <div class="fila-detalle">
-            <div class="img-detalle">
-                <img src="img/parque-bens.jpg" alt="Parque de Bens">
-            </div>
-            <div class="texto-detalle">
-                <p><strong>El Parque de Bens</strong>  es una de las áreas recreativas más extensas y espectaculares de A Coruña, ofreciendo las mejores puestas de sol sobre las Islas de San Pedro. Lo que antiguamente fue un vertedero, hoy es un ejemplo de recuperación ambiental con amplias praderas, miradores panorámicos y una réplica del arco del triunfo. Es el sitio ideal para practicar senderismo suave, disfrutar de un picnic o simplemente contemplar la inmensidad del Océano Atlántico y el perfil de la ciudad desde una perspectiva única.</p>
-            </div>
+        <div class="contenedor-botones">
+            <button id="btn-mostrar-mas" class="boton-interactivo">Mostrar más</button>
+            <button id="btn-mostrar-menos" class="boton-interactivo" style="display: none;">Mostrar menos</button>
         </div>
 
+        <script src="../Javascript/mostrarContenido.js"></script>
+        <script src="../Javascript/api.js"></script>
+
     </div>
-
-    <div class="contenedor-botones">
-        <button id="btn-mostrar-mas" class="boton-interactivo">Mostrar más</button>
-        <button id="btn-mostrar-menos" class="boton-interactivo" style="display: none;">Mostrar menos</button>
-    </div>
-
-    <script src="../Javascript/mostrarContenido.js"></script>
-
  </main>
 
  <footer class="footer">
