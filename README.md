@@ -84,6 +84,8 @@ pip install -r requirements.txt
 ### 4. Configuración de la Base de Datos (SQLite3)
 Aplica las migraciones para que se generen las tablas de la base de datos a partir de los modelos:
 
+cd backend
+
 python manage.py makemigrations
 
 python manage.py migrate
