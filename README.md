@@ -1,24 +1,21 @@
-# Visit_coruña 
+# visit_coruña 
 
-**Proyecto Intermodular | Desarrollo de Aplicaciones Web (DAW) - Tipo 2**
-
-**Autor:** Santiago Cambeiro Ramírez
-
+**Proyecto Intermodular | Desarrollo de Aplicaciones Web (DAW) - Tipo 2** **Autor:** Santiago Cambeiro Ramírez  
 **Curso Académico:** 2025/2026
 
 ##  Presentación del Proyecto
-**Visit_coruña** es una aplicación web técnica orientada al sector turístico de la ciudad de A Coruña. El objetivo principal es ofrecer una plataforma moderna, rápida y accesible donde los usuarios (tanto turistas como residentes) puedan consultar información detallada sobre los puntos de interés de la ciudad, clasificados por categorías.
+**visit_coruña** es una aplicación web técnica orientada al sector turístico de la ciudad de A Coruña. El objetivo principal es ofrecer una plataforma moderna, rápida y accesible donde los usuarios (tanto turistas como residentes) puedan consultar información detallada sobre los puntos de interés de la ciudad, clasificados por categorías.
 
-La aplicación nace como una solución que combina una interfaz de usuario intuitiva con una arquitectura de datos en el servidor, centralizando la oferta cultural, natural y de ocio de la ciudad mediante un sistema dinámico de tarjetas y etiquetas.
+La aplicación nace como una solución que combina una interfaz de usuario intuitiva (Mobile First) con una robusta arquitectura de datos en el servidor, centralizando la oferta cultural, natural y de ocio de la ciudad mediante un sistema dinámico de tarjetas y etiquetas.
 
 ##  Tecnologías y Lenguajes Utilizados
 
-El proyecto sigue una arquitectura separada utilizando las siguientes tecnologías:
+El proyecto sigue una arquitectura separada (Cliente / Servidor) utilizando las siguientes tecnologías:
 
 **Frontend (Interfaz de Usuario):**
 * **HTML5:** Estructura semántica.
 * **CSS3:** Diseño responsivo, Media Queries, variables y clases reutilizables.
-* **JavaScript (Vanilla):**  interactividad y peticiones asíncronas mediante la API `fetch()`.
+* **JavaScript (Vanilla):** Lógica del DOM, interactividad y peticiones asíncronas mediante la API `fetch()`.
 
 **Backend (Servidor y API REST):**
 * **Python 3:** Lenguaje principal del servidor.
@@ -28,7 +25,7 @@ El proyecto sigue una arquitectura separada utilizando las siguientes tecnologí
 **Herramientas adicionales:**
 * **Postman:** Testeo y validación de los endpoints de la API.
 * **Git/GitHub:** Control de versiones.
-* **Figma:** Diseño de Wireframes y prototipo.
+* **Figma:** Diseño de Wireframes.
 
 ##  Estructura de la API REST (Endpoints)
 
@@ -49,25 +46,55 @@ Para cumplir con los requisitos técnicos, se han testeado todos los métodos HT
 * `PATCH /api/lugares/{id}/`: Actualización parcial de un lugar específico.
 * `DELETE /api/lugares/{id}/`: Eliminación de un registro de la base de datos.
 
-##  Instalación y Ejecución en Local
+##  Requisitos Previos
 
-Si deseas clonar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
+Antes de comenzar con la instalación, asegúrate de tener instalado en tu sistema:
+* **Python 3.10** o superior (y `pip` para la gestión de paquetes).
+* **Git** para clonar el repositorio.
+* Un navegador web moderno (Chrome, Firefox, Edge).
+* *Opcional pero recomendado:* Visual Studio Code con la extensión **Live Server** para ejecutar el frontend de forma nativa.
 
-1. **Clonar el repositorio:**
-   `git clone https://github.com/SCambeiro24/ProyectoFinal`
-   `cd ProyectoFinal`
+##  Instalación Limpia y Ejecución en Local
 
-2. **Crear e iniciar el entorno virtual:**
-   `python -m venv venv`
-   `source venv/bin/activate  # En Windows: venv\Scripts\activate`
+Sigue estos pasos cuidadosamente para realizar una instalación desde cero:
 
-3. **Instalar dependencias:**
-   `pip install -r requirements.txt`
+### 1. Clonar el repositorio
+Abre tu terminal y clona el proyecto en tu máquina local:
+git clone [https://github.com/SCambeiro24/ProyectoFinal](https://github.com/SCambeiro24/ProyectoFinal)
+cd ProyectoFinal 
 
-4. **Aplicar migraciones y arrancar el servidor Django:**
-   `python manage.py makemigrations`
-   `python manage.py migrate`
-   `python manage.py runserver`
+### 2. Configuración del Entorno Virtual (Backend)
+Es obligatorio crear un entorno virtual para no crear conflictos con otras librerías de Python en tu sistema.
+ Crear el entorno virtual
+python -m venv venv
 
-5. **Abrir el Frontend:**
-`Simplemente abre el archivo index.html de la carpeta del frontend en cualquier navegador web modernoo utiliza la extensión Live Server de Visual Studio Code.`
+
+ Activar el entorno virtual en Windows:
+venv\Scripts\activate
+
+ 
+ Activar el entorno virtual en macOS/Linux:
+source venv/bin/activate
+
+### 3. Instalación de Dependencias
+Con el entorno virtual activado, instala todas las librerías necesarias (Django, DRF, CORS headers, etc.):
+
+pip install -r requirements.txt
+
+### 4. Configuración de la Base de Datos (SQLite3)
+Aplica las migraciones para que se generen las tablas de la base de datos a partir de los modelos:
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+### 5. Levantar el Servidor Backend
+Inicia el servidor local de Django
+
+python manage.py runserver
+
+### 6. Ejecución del Frontend (Cliente)
+Con el servidor backend corriendo en una terminal, abre la carpeta del proyecto y ejecuta el archivo index.html situado en la carpeta del frontend.
+se recomienda encarecidamente abrir el archivo utilizando la extensión Live Server de VSCode
